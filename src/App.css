@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+
 }
 
 .App-logo {
@@ -23,6 +25,16 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+
+.Form{
+  width: 50vh;
+  margin-left: 15vh;
+}
+
+.Input{width: 50vh;}
+
+.TituloLabel{text-align: left !important; color: aliceblue;}
 
 .App-link {
   color: #61dafb;
