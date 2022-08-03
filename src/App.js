@@ -28,26 +28,28 @@ function App() {
 
 
           <p className="TituloLabel">Fecha</p>
-          <Form.Control  type="date" name="fecha" className="Input mb-3" value="" />
+          <Form.Control  type="date" name="fecha" className="Input mb-3" />
 
 
 
           <p className="TituloLabel">Hora</p>
-          <Form.Control type="time" name="hora" className="Input mb-3" value="" />
+          <Form.Control type="time" name="hora" className="Input mb-3" />
 
-          <p className="TituloLabel">Password</p>
-          <Form.Control className="mb-3" type="password" placeholder="Password" />
+          <p className="TituloLabel">Sintomas</p>
+          <Form.Control as="textarea" style={{ height: '100px' }} className="mb-3" type="text"  />
+
+          
+        <Button className="Boton" variant="primary" type="submit">
+          AGREGAR CITA
+        </Button> 
 
         </Form.Group>
 
 
-        <Button className="col-3" variant="primary" type="submit">
-          Submit
-        </Button>
       </Form>
 
 
-      <Card className="col-3" style={{ width: '18rem' }}>
+      <Card className="col-3 " style={{ width: '18rem' }}>
         <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
           <Card.Title>Card Title</Card.Title>

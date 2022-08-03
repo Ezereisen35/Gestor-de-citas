@@ -26,10 +26,14 @@
   color: white;
 }
 
+.Boton{
+  width:100%;
+}
+
 
 .Form{
   width: 50vh;
-  margin-left: 15vh;
+  margin-left: 40vh;
 }
 
 .Input{width: 50vh;}
