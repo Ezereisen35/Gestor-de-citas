@@ -30,16 +30,22 @@
   width:100%;
 }
 
-.Card{}
+.Tarjeta{margin-left: 5%;}
+
+.Titulo{color: white;}
+
+.Posicion{padding: 2%; margin-left: 50%;}
 
 .Form{
   width: 50vh;
-  margin-left: 40vh;
+  margin-left: 25%;
 }
 
 .Input{width: 50vh;}
 
 .TituloLabel{text-align: left !important; color: aliceblue;}
+
+.TextoCard{margin-left: 0vh !important; }
 
 .App-link {
   color: #61dafb;
