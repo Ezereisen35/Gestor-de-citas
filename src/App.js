@@ -20,7 +20,7 @@ function App() {
   }])
 
   return (
-    <div className="App  " >
+    <div className="App" >
 
       <h1 className='Titulo'>ADMINISTRADOR DE PACIENTES </h1>
 
@@ -33,7 +33,7 @@ function App() {
 
       <Row>
         <Formulario></Formulario>
-        <Cita></Cita>
+        <Cita citas={citas} setCitas={setCitas} />
       </Row>
 
 
@@ -108,17 +108,30 @@ function Formulario({ setCitas }) {
 
 function Cita(props) {
   return (
-    <Card className="Tarjeta" style={{ width: '18rem' }}>
-      <Card.Body>
-
-        <Card.Text className='TextoCard'>Mascota: {props.mascota}</Card.Text>
-        <Card.Text>Dueño: {props.dueño}</Card.Text>
-        <Card.Text>Fecha:{props.fecha}</Card.Text>
-        <Card.Text>Hora:{props.hora}</Card.Text>
-        <Card.Text>Sintomas:{props.sintomas}</Card.Text>
-        <button onClick={props.delete}> ELIMINAR CITA </button>
-      </Card.Body>
-    </Card>
+    <>
+      <Card className="Tarjeta" style={{ width: '18rem' }}>
+        <Card.Body>
+          <Card.Text className='TextoCard'>Mascota: {props.mascota}</Card.Text>
+          <Card.Text>Dueño: {props.dueño}</Card.Text>
+          <Card.Text>Fecha:{props.fecha}</Card.Text>
+          <Card.Text>Hora:{props.hora}</Card.Text>
+          <Card.Text>Sintomas:{props.sintomas}</Card.Text>
+          <button onClick={props.delete}> ELIMINAR CITA </button>
+        </Card.Body>
+      </Card>
+      <div className="flex flex-col gap-4">{props.citas.map((cita, i) => <Cita
+                {...cita}
+                delete={() => {
+                    console.log("hi")
+                    const copy = [...props.citas]
+                    copy.splice(i, 1)
+                    console.log(copy)
+                    props.setCitas(copy)
+                }}
+                key={i}
+            />)}</div>
+    </>
+    
   )
 
 }
